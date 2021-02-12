@@ -10,6 +10,35 @@ namespace hada_p1
     {
         static void Main(string[] args)
         {
+            char c;
+            int n;
+            char continuar;
+            do
+            {
+                Console.Write("Unidad a introducir? (m/s): ");
+                c = Console.ReadLine()[0];
+                if (c == 'm')
+                {
+                    Console.Write("Cantidad(m): ");
+                    n = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("En segundos: {0}", HadaP1.Minutes2Seconds(n));
+
+                }
+                else if (c == 's')
+                {
+                    Console.Write("Cantidad(s): ");
+                    n = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("En minutos: {0}", HadaP1.Seconds2Minutes(n));
+
+                }
+                else
+                {
+                    Console.WriteLine("ERROR: Unidad incorrecta.");
+
+                }
+                Console.Write("Quieres continuar?(s/n): ");
+                continuar = Console.ReadLine()[0];
+            } while (continuar == 's');
         }
     }
 }

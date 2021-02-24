@@ -15,7 +15,7 @@ namespace hada_p1
             char continuar;
             do
             {
-                Console.Write("Unidad a introducir? (m/s): ");
+                Console.Write("Unidad a introducir? (h/m/s): ");
                 c = Console.ReadLine()[0];
                 if (c == 'm')
                 {
@@ -30,6 +30,12 @@ namespace hada_p1
                     n = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("En minutos: {0}", HadaP1.Seconds2Minutes(n));
 
+                }
+                else if (c== 'h')
+                {
+                    Console.Write("Cantidad(h): ");
+                    n = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("En minutos: {0}", HadaP1.Hours2Minutes(n));
                 }
                 else
                 {
